@@ -1,5 +1,5 @@
 # BUDGET MANAGER PROJECT
-#FUNCTIONS
+# FUNCTIONS
 
 ```javascript
 //Functions
