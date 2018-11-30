@@ -1,7 +1,18 @@
 # BUDGET MANAGER PROJECT
+
+# FUNCTION CONSTRUCTOR
+# KEY NOTES 30/11/2018
+
+ 1.Function constructor is a template or blueprint where other objects are built base on the constructor
+ 
+ 2.When creating a function constructor be mindful of the arguements you passed in thus, they must be in order when instantiating it
+
+ 3. Function constructor
+
+
+
+
 # CHATTING WITH THE DOM
-
-
 ```javascript
 
 //Btn eventListener function
