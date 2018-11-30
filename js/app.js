@@ -42,7 +42,6 @@ document.querySelector("#calc-age").addEventListener("click", function (e) {
   }
   
     calculateAge(yearOfBirth);
-
 });
 
 
