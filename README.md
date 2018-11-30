@@ -1,16 +1,57 @@
 # BUDGET MANAGER PROJECT
 
-# FUNCTION CONSTRUCTOR
-# KEY NOTES 30/11/2018
+## FUNCTION CONSTRUCTOR
 
- 1.Function constructor is a template or blueprint where other objects are built base on the constructor
+### KEY NOTES 30/11/2018
+
+ 1. Function constructor is a template or blueprint where other objects are built base on the constructor
  
- 2.When creating a function constructor be mindful of the arguements you passed in thus, they must be in order when instantiating it
+ 2. When creating a function constructor be mindful of the arguements you passed in thus, they must be in order when instantiating it
 
- 3. Function constructor
+ 3. When an instantiated object is trying to access it's properties, first it will look up to it's parent thus from which it was created, if it did not find it, it will move to OBJECT and this process is call Prototype Chain
 
+ 4. Function constructor can take all properties example, functions
 
+ 5. "this" keyword refers to the windows object but when you use this in an object it refers to the properties of the object itself.
 
+ 6. It's advisable to create a prototype function if you the object will have many functions. Prototype functions can be access by it's children.
+
+ 6. You can create any functions to manipulate your objects
+
+### CODE EXAMPLES
+
+```javascript
+//Function constructor
+
+const Person = function (firstName, lastName, yearOfBirth, job) {
+this.firstName = firstName;
+this.lastName = lastName;
+this.yearOfBirth = yearOfBirth;
+this.job = job;
+}
+
+//This function is available to it's child
+Person.prototype.fullName = function(){
+return `Your full name is ${this.firstName} ${this.lastName}`
+}
+
+//Another function to determine if your job is programming
+Person.prototype.isYourJobProgrammer = function(){
+   if (this.job == "Programmer") {
+       alert("You are there");
+   }
+
+}
+
+//Instantiating my object
+const person1 = new Person("Emmanuel", "Tweneboah",1988,"Programmer");
+
+//Calling my function Full name
+const fullName = person1.fullName();
+console.log(fullName);
+ person1.isYourJobProgrammer();
+
+```
 
 # CHATTING WITH THE DOM
 ```javascript
@@ -26,7 +67,6 @@ document.querySelector("#calc-age").addEventListener("click", function (e) {
   const display = document.querySelector("#display-fullName");
   const yearOfBirth = document.querySelector("#year-of-birth").value;
  
-
   function calculateAge(yearOfBirth) {
    
     //Pricing
