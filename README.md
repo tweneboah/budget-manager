@@ -1,4 +1,17 @@
-# BUDGET MANAGER PROJECT
+## JOURNEY TO MY BUDGET MANAGER PROJECT
+
+### FACTS ABOUT FUNCTIONS 30/11/2018
+
+ 1. Functions are also object because is an instance of object type.
+
+ 2. Functions behave like objects
+
+ 3. Functions can be passed as arguement to another function
+
+ 4. We can store functions in a variable.
+
+ 5. Function can also return another function
+
 
 ## FUNCTION CONSTRUCTOR
 
@@ -14,9 +27,53 @@
 
  5. "this" keyword refers to the windows object but when you use this in an object it refers to the properties of the object itself.
 
- 6. It's advisable to create a prototype function if you the object will have many functions. Prototype functions can be access by it's children.
+ 6. It's advisable to create a prototype function if you the object will have many functions. Prototype functions can be access by it's children and this is call INHERITANCE !!!
 
- 6. You can create any functions to manipulate your objects
+ 6. You can create any functions to manipulate your object
+
+ 7. Primitives varibles are independent thus when you change a value of a variable whithin a function it does not affect the original variable. While Objects are dependent thus whenever you change a value of a variable or you pass an object to a function it affects it's parent because objects are passed by reference.
+
+
+### CODE EXAMPLES
+ ```javascript
+ //Passing functions as arguement
+
+ const years = [1890, 1990, 2005, 1988];
+ /*
+ 1.For this data we can determine the age of each
+  2. We can determine if a certain age is above or below a certain age
+ */
+
+ function arrayCalc (arr,fn) {
+     const arrayResults = [];
+     for (let i = 0; i < arr.length; i++) {
+      arrayResults.push(fn(arr[i]))
+         
+     }
+
+     return arrayResults;
+ }
+
+
+//Calculate age function
+function calculateAge (el){
+    return 2018 - el;
+}
+
+//Function to determine if one is below 18 years
+function isAboveEighteenYears (el){
+    return el >= 18;
+}
+
+//Using the functions
+
+let ages = arrayCalc(years, calculateAge);
+const isFullAge = arrayCalc(ages, isAboveEighteenYears);
+
+console.log(ages);
+console.log(isFullAge);
+ ```
+
 
 ### CODE EXAMPLES
 
@@ -100,9 +157,6 @@ document.querySelector("#calc-age").addEventListener("click", function (e) {
     calculateAge(yearOfBirth);
 
 });
-
-
-
 
 
 
