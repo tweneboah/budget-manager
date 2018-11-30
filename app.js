@@ -37,7 +37,8 @@ function calculateAge(yearOfBirth) {
 
 function yearsUntilRetirement (name, yearOfBirth) {
  let age = calculateAge(yearOfBirth);
- return age;
+ let retirementAge = 60 - age;
+ return retirementAge;
 }
 
 let yearsToRetire = yearsUntilRetirement("Tweneboah", 1999);
