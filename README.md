@@ -1,5 +1,47 @@
 ## JOURNEY TO MY BUDGET MANAGER PROJECT
 
+
+### FUNCTION RETURNING ANOTHER FUNCTION 1/12/2018
+
+1. We can use a function to return multiple functions base on conditions
+2. We can use function returning function to construct for specific group
+
+3. Am using function returning function to construct quiz base on the student level. See the code below
+
+###CODE EXAMPLE
+```javascript
+
+const studentLevel = (level) => {
+  if (level === "stage1") {
+      return studentName => {
+        console.log(`What's the name of your current teacher ${studentName}`);
+      }
+  }else if (level === "stage2") {
+      return studentName => {
+          console.log(`What's the current date? ${studentName}`);
+      }
+  }else if (level === "stage3") {
+      return studentName => {
+          console.log(`${studentName} explain the word verb`);
+      }
+  }else{
+      return studentName => {
+          console.log(`Are you sure you are in this class ? ${studentName}`);
+      }
+  }
+
+}
+
+//Using the function
+const stage1Questions =  studentLevel("stage");
+const stage2Questions = studentLevel("stage2");
+const stage3Questions = studentLevel("stage3");
+
+stage1Questions("Prince");
+stage2Questions("Thomas");
+stage3Questions("Agnes");
+```
+.............................................................
 ### FACTS ABOUT FUNCTIONS 30/11/2018
 
  1. Functions are also object because is an instance of object type.
@@ -12,29 +54,7 @@
 
  5. Function can also return another function
 
-
-## FUNCTION CONSTRUCTOR
-
-### KEY NOTES 30/11/2018
-
- 1. Function constructor is a template or blueprint where other objects are built base on the constructor
- 
- 2. When creating a function constructor be mindful of the arguements you passed in thus, they must be in order when instantiating it
-
- 3. When an instantiated object is trying to access it's properties, first it will look up to it's parent thus from which it was created, if it did not find it, it will move to OBJECT and this process is call Prototype Chain
-
- 4. Function constructor can take all properties example, functions
-
- 5. "this" keyword refers to the windows object but when you use this in an object it refers to the properties of the object itself.
-
- 6. It's advisable to create a prototype function if you the object will have many functions. Prototype functions can be access by it's children and this is call INHERITANCE !!!
-
- 6. You can create any functions to manipulate your object
-
- 7. Primitives varibles are independent thus when you change a value of a variable whithin a function it does not affect the original variable. While Objects are dependent thus whenever you change a value of a variable or you pass an object to a function it affects it's parent because objects are passed by reference.
-
-
-### CODE EXAMPLES
+ ### CODE EXAMPLES
  ```javascript
  //Passing functions as arguement
 
@@ -73,6 +93,30 @@ const isFullAge = arrayCalc(ages, isAboveEighteenYears);
 console.log(ages);
 console.log(isFullAge);
  ```
+
+
+
+## FUNCTION CONSTRUCTOR
+
+### KEY NOTES 30/11/2018
+
+ 1. Function constructor is a template or blueprint where other objects are built base on the constructor
+ 
+ 2. When creating a function constructor be mindful of the arguements you passed in thus, they must be in order when instantiating it
+
+ 3. When an instantiated object is trying to access it's properties, first it will look up to it's parent thus from which it was created, if it did not find it, it will move to OBJECT and this process is call Prototype Chain
+
+ 4. Function constructor can take all properties example, functions
+
+ 5. "this" keyword refers to the windows object but when you use this in an object it refers to the properties of the object itself.
+
+ 6. It's advisable to create a prototype function if you the object will have many functions. Prototype functions can be access by it's children and this is call INHERITANCE !!!
+
+ 6. You can create any functions to manipulate your object
+
+ 7. Primitives varibles are independent thus when you change a value of a variable whithin a function it does not affect the original variable. While Objects are dependent thus whenever you change a value of a variable or you pass an object to a function it affects it's parent because objects are passed by reference.
+
+
 
 
 ### CODE EXAMPLES
