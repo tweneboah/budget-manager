@@ -8,7 +8,7 @@
 
 3. Am using function returning function to construct quiz base on the student level. See the code below
 
-###CODE EXAMPLE
+### CODE EXAMPLE
 ```javascript
 
 const studentLevel = (level) => {
