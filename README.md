@@ -6,7 +6,7 @@
 
 2. IIFE also create their own local scope which cannot be accessed anywher unless permision has been granted
 
-###CODE EXAMPLE
+### CODE EXAMPLE
 
 ```javascript
 (function add(){
@@ -16,7 +16,7 @@
 
 
 
-###CLOSURES 1/12/2018
+### CLOSURES 1/12/2018
 
 1. Closures are not created mannually but it's automatically created.
 
@@ -27,42 +27,6 @@
 4. Am taking advantage of closure to modify my created quiz function below.
 
 5. With the help of closure we have reduced the number of return keywords and now my code is cleaner than before
-
-###CODE EXAMPLE
-
-```javascript
-const studentLevel = level =>{
-    return name =>{
-       if (level === "stage1") {
-
-        console.log(`What's the name of your current teacher ${name}`);
-    
-  }else if (level === "stage2") {
-      
-          console.log(`What's the current date? ${name}`);
-      
-  }else if (level === "stage3") {
-     
-          console.log(`${name} explain the word verb`);
-
-  }else{
-    
-          console.log(`Are you sure you are in this class ? ${studentName}`);
-      
-  }
-    }
-}
-
-//Using the function
-const stage1Questions =  studentLevel("stage");
-const stage2Questions = studentLevel("stage2");
-const stage3Questions = studentLevel("stage3");
-
-stage1Questions("Prince");
-stage2Questions("Thomas");
-stage3Questions("Agnes");
-```
-
 
 ### FUNCTION RETURNING ANOTHER FUNCTION 1/12/2018
 
