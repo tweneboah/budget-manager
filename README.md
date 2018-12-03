@@ -8,9 +8,13 @@
 
 ###CODE EXAMPLE
 
-(function add(num1, num2){
-    alert(num1 + num2);
+```javascript
+(function add(){
+    //your functions goes here
 })(20, 10);
+```
+
+
 
 ###CLOSURES 1/12/2018
 
