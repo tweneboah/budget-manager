@@ -1,5 +1,64 @@
 ## JOURNEY TO MY BUDGET MANAGER PROJECT
 
+### IMMEDIATELY INVOKED FUNCTION EXPRESSION - IIFE 1/12/2018
+
+1. IIFE functions are functions that are called immediately as soon as it has been constructed without calling it.
+
+2. IIFE also create their own local scope which cannot be accessed anywher unless permision has been granted
+
+###CODE EXAMPLE
+
+(function add(num1, num2){
+    alert(num1 + num2);
+})(20, 10);
+
+###CLOSURES 1/12/2018
+
+1. Closures are not created mannually but it's automatically created.
+
+2. Closure is where inner functions are able to access the variables of an outer function after it's has finished it execution.
+
+3. We can make use of closures to create a mother or generic function where it's childred functions can utilize it's values.
+
+4. Am taking advantage of closure to modify my created quiz function below.
+
+5. With the help of closure we have reduced the number of return keywords and now my code is cleaner than before
+
+###CODE EXAMPLE
+
+```javascript
+const studentLevel = level =>{
+    return name =>{
+       if (level === "stage1") {
+
+        console.log(`What's the name of your current teacher ${name}`);
+    
+  }else if (level === "stage2") {
+      
+          console.log(`What's the current date? ${name}`);
+      
+  }else if (level === "stage3") {
+     
+          console.log(`${name} explain the word verb`);
+
+  }else{
+    
+          console.log(`Are you sure you are in this class ? ${studentName}`);
+      
+  }
+    }
+}
+
+//Using the function
+const stage1Questions =  studentLevel("stage");
+const stage2Questions = studentLevel("stage2");
+const stage3Questions = studentLevel("stage3");
+
+stage1Questions("Prince");
+stage2Questions("Thomas");
+stage3Questions("Agnes");
+```
+
 
 ### FUNCTION RETURNING ANOTHER FUNCTION 1/12/2018
 
@@ -42,6 +101,9 @@ stage2Questions("Thomas");
 stage3Questions("Agnes");
 ```
 .............................................................
+
+
+
 ### FACTS ABOUT FUNCTIONS 30/11/2018
 
  1. Functions are also object because is an instance of object type.
