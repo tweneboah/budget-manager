@@ -11,7 +11,7 @@
 ```javascript
 (function add(){
     //your functions goes here
-})(20, 10);
+})();
 ```
 
 

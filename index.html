@@ -1,70 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-       <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
 
-    <title>Retirement Calculator</title>
+    <style>
+        .success, .error {
+      color: white;
+      padding: 5px;
+      margin: 5px 0 15px 0;
+    }
+
+    .success {
+      background: green;
+    }
+
+    .error {
+      background: red;
+    }
+  </style>
+    <title>Book List</title>
 </head>
 
 <body>
-   
-<div class = "myform">
     <div class="container">
-        <div class="row">
-           
-            <div class="col my-3">
-                <h3 class="text-danger">Calculate your retirement age left</h3>
-                <p>We are giving out incentives base on your retirement age left</p>
-              <form>
-               <div class="form-group">
-                <input type="text" class="form-control w-50" id="first-name" placeholder=" Enter first name">
-               </div>
-               <div class="form-group">
-                <input type="text" class="form-control w-50" id="last-name" placeholder="Enter last name"></input>
-                </div>
-                <div class="form-group">
-                <input type="number" class="form-control w-50" id="year-of-birth" placeholder="Enter year of Birth"></input>
-                </div>
-                <div>
-                <a href="" class="btn btn-outline-success" id="calc-age">Get me my incentives</a>
-            </div>
-               </form>
-            </div>
+<div class="row">
+    <div class="col">
+        <h5 class="text-danger">Applying Object Oriented Programming - OOP as a beginner</h5>
+        <h4>STEPS:</h4>
+       <p> First of all, I visualised the functionality of my project. This project will only take input from form fields and display to UI using OPP. Based on this I found three modules</p>
+       <h5>Module 1: Customer Constructor</h5>
+       <p>This is  where I constructed my customer object. Over here I constructed the object and it's properties only </p>
 
-        </div>
 
-    </div>
+
+       <h5>Module 2: UI Constructor</h5>
+       <p>This is where all the functions of my app will be placed thus all my prototype functions will be constructed. These prototype functions include  add To List funtion, clear fields function, validation function and delete function</p>
+
+
+       <h5>Module 3: App Controller - Event Listeners</h5>
+        <p>This function only do the work of the prototye functions. NOTE: The flow of my app look like this  Customer Object => UI Prototype function => App controller / Event Listeners</p><br>
+        Firstly All the modules must be instantiated inside the App moule where the event will be fired. After the instantiation, then I passed the objects to the prototype function for operation.
+        
+        
+        the object constructor must be passed to the UI prototype functions before the App controller module can use it.
+
+      
     </div>
 
-        <div class="container">
-            <div class="row my-2">
-                <div class="col-6">
-                    <p id="display-fullName" style="display: inline" class="text-muted">No incentives found yet</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-</div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    </div>
 
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/advance.js"></script>
+    <div class="container">
+        <form id="book-form">
+            <div>
+                <label for="title">First name</label>
+                <input type="text" id="first-name" class="u-full-width">
+            </div>
+            <div>
+                <label for="author">Last name</label>
+                <input type="text" id="last-name" class="u-full-width">
+            </div>
+            <div>
+                <label for="isbn">Job type</label>
+                <input type="text" id="job" class="u-full-width">
+            </div>
+            <div>
+                <input type="submit" value="Submit" class="u-full-width">
+            </div>
+        </form>
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Job type</th>
+                </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
+
+    <script src="js/customer-db.js"></script>
 </body>
 
 </html>

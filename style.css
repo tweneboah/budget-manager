@@ -1,0 +1,23 @@
+ 
+  body {
+      background: rebeccapurple;
+  }
+ .success,
+ .error {
+     color: white;
+     padding: 5px;
+     margin: 5px 0 15px 0;
+ }
+
+ .success {
+     background: green;
+ }
+
+ body {
+     background: rebeccapurple;
+ }
+
+ .error {
+     background: red;
+ }
+

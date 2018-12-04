@@ -18,7 +18,7 @@ document.querySelector("#calc-age").addEventListener("click", function (e) {
     const price2 = "$30000.00";
     const price3 = "$40000.00"
 
-    //Other variables
+    //Other variablesyyyyyyyy
    const retirementAge = 60;
    const currentYear = 2018;
    
