@@ -26,10 +26,10 @@ function Customers (firstName, lastName, job){
 //UI Constructor function
 
 function UI () {
-    //Add book list
-    UI.prototype.addBookToList = function (customersParam) {
+    //Add customer list
+    UI.prototype.addCustomerToList = function (customersParam) {
 
-         const list = document.getElementById("book-list");
+         const list = document.getElementById("customer-list");
 
          //Create tr element
          const row = document.createElement("tr");
@@ -46,7 +46,7 @@ function UI () {
 };
 
 //App controller - Event-Listener
-document.getElementById("book-form").addEventListener("submit", function(e){
+document.getElementById("customer-form").addEventListener("submit", function(e){
  e.preventDefault();
 
   //Get form Values
