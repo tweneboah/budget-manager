@@ -1,5 +1,69 @@
 ## JOURNEY TO MY BUDGET MANAGER PROJECT
 
+### Applying Object Oriented Programming - OOP to create Customers registration and display to UI as a beginner 4/12/2018
+#### STEPS:
+First of all, I visualised the functionality of my project. This project will only take input from form fields and display to UI using OPP. Based on this I found three modules
+
+#### Module 1: Customer Constructor
+This is where I constructed my customer object. Over here I constructed the object and it's properties only
+
+#### Module 2: UI Constructor
+This is where all the functions of my app will be placed thus all my prototype functions will be constructed. These prototype functions include add To List funtion, clear fields function, validation function and delete function
+
+#### Module 3: App Controller - Event Listeners
+This function only do the work of the prototye functions. NOTE: The flow of my app look like this Customer Object => UI Prototype function => App controller / Event Listeners
+
+Firstly All the modules must be instantiated inside the App moule where the event will be fired. After the instantiation, then I passed the objects to the prototype function for operation. the object constructor must be passed to the UI prototype functions before the App controller module can use it.
+
+### code overview
+```javascript
+function Customers (firstName, lastName, job){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.job = job;
+};
+
+//UI Constructor function
+
+function UI () {
+    //Add book list
+    UI.prototype.addBookToList = function (customersParam) {
+
+         const list = document.getElementById("book-list");
+
+         //Create tr element
+         const row = document.createElement("tr");
+
+         //Insert cols
+         row.innerHTML = `
+                    <td>${customersParam.firstName}</td>
+                    <td>${customersParam.lastName}</td>
+                    <td>${customersParam.job}</td>`;
+         //Append to list
+         list.appendChild(row);
+
+    };
+};
+
+//App controller - Event-Listener
+document.getElementById("book-form").addEventListener("submit", function(e){
+ e.preventDefault();
+
+  //Get form Values
+  const firstName = document.getElementById("first-name").value;
+  lastName = document.getElementById("last-name").value;
+  job = document.getElementById("job").value;
+
+
+  //Instantiating customers object
+  const customer = new Customers(firstName, lastName, job)
+
+  const ui = new UI();
+  ui.addBookToList(customer);
+});
+
+```
+
 ### IMMEDIATELY INVOKED FUNCTION EXPRESSION - IIFE 1/12/2018
 
 1. IIFE functions are functions that are called immediately as soon as it has been constructed without calling it.
