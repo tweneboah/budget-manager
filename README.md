@@ -1,6 +1,6 @@
-## JOURNEY TO MY BUDGET MANAGER PROJECT
-
+## JOURNEY TO MY BUDGET MANAGER PROJECT 
 ### Applying Object Oriented Programming - OOP to create Customers registration and display to UI as a beginner 4/12/2018
+### Live preview my ongoing project <https://tweneboah.github.io/budget-manager/>
 #### STEPS:
 First of all, I visualised the functionality of my project. This project will only take input from form fields and display to UI using OPP. Based on this I found three modules
 
